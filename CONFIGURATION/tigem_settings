@@ -1,0 +1,106 @@
+###############Programs paths
+bwa_path = /opt/software/ngs/bin/bwa
+fastqc_path = /opt/software/ngs/bin/fastqc
+java_path = /opt/software/java/jdk1.7.0_25/jre/bin/java
+trimgalore_path = /opt/software/ngs/bin/trim_galore
+picard_path = /opt/software/ngs/lib/picard-tools-1.119/
+samtools_path = /opt/software/ngs/bin/samtools
+gatk_path =  /opt/software/ngs/lib/gatk34/GenomeAnalysisTK.jar
+bwakit_path = /home/users/musacchia/bin/bwa.kit 
+cutadapat_path = /opt/software/ngs/bin/cutadapt
+bedtools_path = ..
+
+#Reference files
+ref_genome_f = /home/ngsworkspace/references/
+ref_align_f = /home/ngsworkspace/references/
+human_genome = ucsc.hg19.fa
+hum_gen_align = ucsc.hg19.fa
+
+chr_suff = chr
+
+#Folders
+log_fold = log
+gatk_ref_f =  /home/ngsworkspace/references/gatk/current
+#Target chromosome regions
+chrom_reg_f = /home/users/musacchia/target_reg
+target_reg_f = ...
+
+#Commands (if you use same parameters for all the 
+#same parameters differentiated by modules will not be used
+qsub_param_4_all = YES
+qsub_cmd = qsub
+qsub_account = null
+qsub_queue = ngs
+qsub_walltime = 24:00:00
+qsub_restartable = YES
+qsub_mem = 45GB
+qsub_ncpus = 12
+qsub_nodes =
+qsub_select = 1
+
+#DATABASE configuration
+db_name = prova
+db_schema = db_schema.sql
+db_dsn = dbi:Pg:host=192.168.5.32;port=5432;sslmode=allow;
+db_host = 192.168.5.32
+db_user = cavani
+db_pass = m4t4d0r
+
+###############Programs paths
+bwa_path = /cineca/prod/applications/bwa/0.7.10/intel--cs-xe-2015--binary/bin/bwa
+fastqc_path = /cineca/prod/applications/fastqc/0.11.3/none/bin/fastqc
+java_path = /cineca/prod/compilers/jre/1.7.0_72/none/bin/java
+trimgalore_path = /cineca/prod/applications/trimgalore/0.4.1/gnu--4.8.3/trimgalore
+picard_path = /cineca/prod/applications/picard/1.119/binary/bin
+samtools_path = samtools
+gatk_path =  /cineca/prod/applications/gatk/3.4.46/jre--1.7.0_72/GenomeAnalysisTK.jar
+cutadapt_path = /cineca/prod/applications/cutadapt/1.9/python--3.5.0--gnu--4.8.3/bin/cutadapt
+bwakit_path = /pico/home/userexternal/fmusacch/bin/bwa.kit
+bedtools_path = /cineca/prod/applications/bedtools/2.24/gnu--4.8.3/bin/
+annovar_path = /pico/home/userexternal/fmusacch/bin/annovar
+
+#Reference files 
+ref_genome_f = /pico/home/userexternal/fmusacch/reference/
+ref_align_f = /cineca/prod/biodata/igenomes/Homo_sapiens/UCSC/hg19/Sequence/BWAIndex/
+human_genome = genome.fa
+hum_gen_align = ucsc.hg19.fa
+annovar_db_f = /pico/home/userexternal/fmusacch/reference/annovar/humandb
+
+
+#Names of target chromosomes
+chr_suff = chr
+all_chr = all_chr
+
+#Folders
+# For using shared /pico/work/TELET_UDP/home/shared/db/snp/
+#
+log_fold = log
+data_fold = data
+gatk_ref_f = /pico/home/userexternal/fmusacch/gatk_reference/
+#Target chromosome regions
+chrom_reg_f = /pico/home/userexternal/fmusacch/chrom_reg
+target_reg_f = /pico/home/userexternal/fmusacch/reference/exome
+scratch_f = /pico/scratch/userexternal/fmusacch
+
+#QSUB parameters
+#Commands (if you use same parameters for all the 
+#same parameters differentiated by modules will not be used
+#UDP:120GB and 20CPUS
+qsub_cmd = qsub
+qsub_account = TELET_UDP
+qsub_queue = parallel
+qsub_walltime = 24:00:00
+qsub_restartable = YES
+qsub_mem = 120GB
+qsub_ncpus = 12
+qsub_nodes =
+qsub_select = 1
+qsub_username = fmusacch
+
+#DATABASE configuration
+db_name = telethon
+db_schema = db_schema.sql
+db_dsn = dbi:Pg:host=postgresql.pico.cineca.it;port=5432;sslmode=allow;
+db_host = postgresql.pico.cineca.it
+db_user = ttudp001
+db_pass = !nj5DRMi
