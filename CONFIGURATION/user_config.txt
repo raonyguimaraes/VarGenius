@@ -89,33 +89,33 @@ block_db = NO
 *************Group 2*******************
 ###NEEDED TO RUN VARGENIUS
 ##PROGRAM PATHS
-R_path = /cineca/prod/applications/r/3.3.1/intel--pe-xe-2016--binary/bin/R
-java_path = /cineca/prod/compilers/jre/1.8.0_73/none/bin/java
-fastqc_path = /cineca/prod/applications/fastqc/0.11.3/none/bin/fastqc
-trimmomatic_path = /cineca/prod/applications/trimmomatic/0.33/binary/trimmomatic-0.33.jar
-samtools_path = /cineca/prod/applications/samtools/1.3/gnu--4.8.3/bin/samtools
-bwa_path = /cineca/prod/applications/bwa/0.7.15/intel--cs-xe-2015--binary/bin/bwa
-bedtools_path = /cineca/prod/applications/bedtools/2.24/gnu--4.8.3/bin/
-picard_path = /cineca/prod/applications/picard/2.3.0/binary/bin/picard.jar
-gatk_path =  /cineca/prod/applications/gatk/3.8/jre--1.8.0_73/GenomeAnalysisTK.jar
-annovar_path = /cineca/prod/applications/annovar/2017Jul16/none/bin/
-freebayes_path = /cineca/prod/applications/freebayes/1.0.2/gnu--4.8.3/bin/freebayes
-bcftools_path = /cineca/prod/applications/bcftools/1.2/gnu--4.8.3/bin/bcftools
-vcftools_path = /cineca/prod/applications/vcftools/0.1.14/gnu--4.8.3/bin/
+R_path = /../bin/R
+java_path = /../java
+fastqc_path = /../fastqc
+trimmomatic_path = /../trimmomatic-0.33.jar
+samtools_path = /../samtools
+bwa_path = /../bwa
+bedtools_path = /../bedtools/
+picard_path = /../picard/picard.jar
+gatk_path =  /../GenomeAnalysisTK.jar
+annovar_path = /../annovar/2017Jul16/none/bin/
+freebayes_path = /../freebayes/1.0.2/gnu--4.8.3/bin/freebayes
+bcftools_path = /../bcftools/1.2/gnu--4.8.3/bin/bcftools
+vcftools_path = /../vcftools/0.1.14/gnu--4.8.3/bin/
 
 #DATABASE configuration
-db_name = telethon
-db_dsn = dbi:Pg:host=postgresql.pico.cineca.it;port=5432;sslmode=allow;
-db_host = postgresql.pico.cineca.it
-db_user = ttudp001
-db_pass = !nj5DRMi
+db_name = vargeniusdb
+db_dsn = dbi:Pg:host=host.domain.it;port=5432;sslmode=allow;
+db_host = host.domain.it
+db_user = USER
+db_pass = PASS
 
 ###JOBS RESOURCES REQUESTS
 #Qsub parameters that cannot be changed depending by the task:
-qsub_account = TELET_TIGEM
-qsub_queue = parallel
+qsub_account = ACCOUNT
+qsub_queue = queue
 qsub_walltime = 5:00:00
-qsub_username = fmusacch
+qsub_username = username
 qsub_walltime_max = 24:00:00
 #Qsub parameters that can be changed depending by the task:
 qsub_mem = 120GB
@@ -123,9 +123,9 @@ qsub_ncpus = 12
 
 #Data to send email
 email_author = VarGenius@tigem.it
-email_recipients = francescomusacchia@gmail.com
+email_recipients = vargenius@admin.com
 email_subject = VarGenius analysis is completed
-email_message =  analysis is complete! Please check results in exome.tigem.it. This message is automatically generated. Please do not use the reply button. For any question send an email to francescomusacchia@gmail.com.
+email_message =  analysis is complete! Please check results in exome.tigem.it. This message is automatically generated. Please do not use the reply button. For any question send an email to vargenius@gmail.com.
 
 #GATK version
 gatk_ver = 3
